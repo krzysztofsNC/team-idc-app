@@ -25,6 +25,9 @@ Parameters:
     Type: String
     Description: Custom domain for the TEAM application
     Default: ""
+  gitacc:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: amplify
 
 Conditions:
   IsEmptyCloudTrailAuditLogs: !Equals [!Ref CloudTrailAuditLogs, ""]
@@ -63,7 +66,8 @@ Resources:
     Type: "AWS::Amplify::App"
     Properties:
       Name: TEAM-IDC-APP
-      Repository: !Sub https://git-codecommit.${AWS::Region}.amazonaws.com/v1/repos/team-idc-app
+      Repository: https://github.com/krzysztofsNC/team-idc-app.git
+      AccessToken: !Ref gitacc
       Description: Temporary Elevated Access Management Application
       CustomRules:
         - Source: /<*>
