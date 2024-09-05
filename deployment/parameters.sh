@@ -17,8 +17,8 @@ REGION=eu-central-1
 TEAM_ACCOUNT=296062590666
 ORG_MASTER_PROFILE=orgMgmtAcc
 TEAM_ACCOUNT_PROFILE=teamDeplAcc
-TEAM_ADMIN_GROUP="TEAM admin"
-TEAM_AUDITOR_GROUP="TEAM auditors"
+TEAM_ADMIN_GROUP="team_admins"
+TEAM_AUDITOR_GROUP="team_auditors"
 TAGS="project=iam-identity-center-team environment=prod"
 CLOUDTRAIL_AUDIT_LOGS=arn:aws:cloudtrail:eu-central-1:864899864501:eventdatastore/33995010-61ca-42fb-ba36-7d24d901d662
 
